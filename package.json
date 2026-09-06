@@ -1,0 +1,13 @@
+{
+  "name": "veterinaria-la-mary",
+  "version": "1.0.0",
+  "description": "Trabajo Final Integrador - Introduccion al Desarrollo Web - UNER 2026",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}
