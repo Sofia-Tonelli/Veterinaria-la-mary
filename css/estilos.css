@@ -1,1 +1,373 @@
+:root {
+  --azul-oscuro: #163a5f;
+  --azul-principal: #2b6ca8;
+  --azul-claro: #7ec8e3;
+  --verde: #6abf8f;
+  --verde-oscuro: #2d7a5f;
+  --naranja: #f4b860;
+  --naranja-oscuro: #d98f2d;
+  --blanco: #ffffff;
+  --gris-fondo: #f4f8fb;
+  --gris-suave: #e7edf3;
+  --gris-texto: #30475e;
+  --gris-oscuro: #1f2c3d;
+  --sombra: 0 18px 35px rgba(18, 45, 75, 0.14);
+}
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #e8f4fb 0%, #e3f7ee 100%);
+  color: var(--gris-texto);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+main {
+  min-height: 70vh;
+}
+
+.header-principal {
+  background: linear-gradient(135deg, var(--azul-oscuro) 0%, var(--azul-principal) 100%);
+  box-shadow: 0 8px 20px rgba(22, 58, 95, 0.18);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.navbar-marca {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--blanco);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.navbar-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(4px);
+  font-size: 1.5rem;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu a {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.navbar-menu a:hover,
+.navbar-menu a.activo {
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--blanco);
+}
+
+.hero {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(120deg, rgba(13, 48, 79, 0.72), rgba(43, 108, 168, 0.38)),
+    url('https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+  padding: 2rem;
+}
+
+.hero-contenido {
+  width: min(760px, 100%);
+  text-align: center;
+  color: var(--blanco);
+  padding: 2rem 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  letter-spacing: -0.04em;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 22px rgba(22, 58, 95, 0.18);
+}
+
+.btn-primario {
+  background: linear-gradient(135deg, var(--naranja) 0%, var(--naranja-oscuro) 100%);
+  color: var(--blanco);
+}
+
+.profesionales {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1.5rem 2rem;
+}
+
+.profesionales h2,
+.pagina-titulo h1,
+.contacto-datos h2,
+.contacto-formulario h2,
+.institucional-bloque h2 {
+  color: var(--azul-oscuro);
+}
+
+.profesionales h2 {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  text-align: center;
+  margin: 0;
+}
+
+.subtitulo {
+  text-align: center;
+  margin: 0.6rem 0 2.2rem;
+  color: #5d7287;
+  font-size: 1.08rem;
+}
+
+.tarjetas-veterinarios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.tarjeta-veterinario {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(90, 128, 170, 0.1);
+  border-radius: 22px;
+  padding: 2rem 1.4rem;
+  text-align: center;
+  box-shadow: var(--sombra);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tarjeta-veterinario:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 38px rgba(32, 82, 122, 0.18);
+}
+
+.tarjeta-avatar {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--azul-claro) 0%, var(--verde) 100%);
+  box-shadow: inset 0 0 0 6px rgba(255, 255, 255, 0.38);
+}
+
+.tarjeta-veterinario h3 {
+  margin: 0 0 0.5rem;
+  color: var(--gris-oscuro);
+  font-size: 1.25rem;
+}
+
+.especializacion {
+  margin: 0 0 0.45rem;
+  font-weight: 600;
+  color: var(--azul-principal);
+}
+
+.valor-consulta {
+  margin: 0;
+  font-weight: 700;
+  color: var(--verde-oscuro);
+}
+
+.pagina-titulo {
+  background: linear-gradient(135deg, rgba(22, 58, 95, 0.95), rgba(43, 108, 168, 0.9));
+  padding: 3.5rem 1.5rem 2.4rem;
+  text-align: center;
+}
+
+.pagina-titulo h1 {
+  margin: 0;
+  color: var(--blanco);
+  font-size: clamp(2.2rem, 4vw, 3rem);
+}
+
+.institucional-contenido,
+.contacto-contenido {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 1.5rem 4rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.institucional-contenido {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.institucional-bloque,
+.contacto-datos,
+.contacto-formulario {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(13, 48, 79, 0.08);
+  border-radius: 22px;
+  padding: 2rem;
+  box-shadow: var(--sombra);
+}
+
+.institucional-bloque h2,
+.contacto-datos h2,
+.contacto-formulario h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.institucional-bloque p,
+.contacto-datos p {
+  margin: 0;
+  color: var(--gris-texto);
+}
+
+.lista-horarios {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--gris-texto);
+}
+
+.lista-horarios li + li {
+  margin-top: 0.5rem;
+}
+
+.contacto-contenido {
+  grid-template-columns: 1fr 1.2fr;
+  align-items: start;
+}
+
+.contacto-datos {
+  background: linear-gradient(180deg, #edf7ff 0%, #ffffff 100%);
+}
+
+.contacto-datos p + p {
+  margin-top: 0.9rem;
+}
+
+.contacto-formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.contacto-formulario label {
+  font-weight: 600;
+  color: var(--azul-oscuro);
+}
+
+.contacto-formulario input,
+.contacto-formulario textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #cfe1ee;
+  border-radius: 12px;
+  background: #f9fcff;
+  font: inherit;
+  color: var(--gris-oscuro);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contacto-formulario input:focus,
+.contacto-formulario textarea:focus {
+  outline: none;
+  border-color: var(--azul-principal);
+  box-shadow: 0 0 0 4px rgba(43, 108, 168, 0.12);
+}
+
+.contacto-formulario textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.footer-principal {
+  background: var(--gris-oscuro);
+  color: rgba(255, 255, 255, 0.82);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer-principal p {
+  margin: 0.35rem 0;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navbar-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .contacto-contenido {
+    grid-template-columns: 1fr;
+  }
+}
