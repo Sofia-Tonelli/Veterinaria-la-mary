@@ -4,9 +4,10 @@ Proyecto de la materia **Introducción al Desarrollo Web** - Tecnicatura Univers
 
 ## Integrantes del grupo
 
-- Apellido, Nombre (completar)
-- Apellido, Nombre (completar)
-- Apellido, Nombre (completar)
+-Tonelli Sofia Macarena
+-Jorge Moreno Abuslaiman
+-Gonzalo Francisconi
+-Valentin Serrano
 
 ## 1ra Entrega
 
@@ -28,7 +29,7 @@ Todas las páginas comparten el mismo menú de navegación y pie de página, y e
    ```
    npx vite
    ```
-3. Abrir en el navegador la URL que indique la terminal (por defecto `http://localhost:5173`).
+3. Abrir en el navegador la URL que indique la terminal (por defecto `http://localhost:5174/`).
 
 ## Próximas entregas
 
