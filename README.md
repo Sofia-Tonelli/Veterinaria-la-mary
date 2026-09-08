@@ -29,7 +29,7 @@ Todas las páginas comparten el mismo menú de navegación y pie de página, y e
    ```
    npx vite
    ```
-3. Abrir en el navegador la URL que indique la terminal (por defecto `http://localhost:5174/`).
+3. Abrir en el navegador la URL que indique la terminal (por defecto `http://localhost:5173/`).
 
 ## Próximas entregas
 
